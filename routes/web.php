@@ -17,5 +17,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+use App\Http\Controllers\SocialShareButtonsController;
 
+Route::get('/social-media-share', [SocialShareButtonsController::class,'ShareWidget']);
 Route::get('/', [BlogController::class, 'index']);
